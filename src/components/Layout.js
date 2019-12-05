@@ -9,7 +9,7 @@ import { withPrefix } from 'gatsby'
 const TemplateWrapper = ({ children }) => {
   const { title, description } = useSiteMetadata()
   return (
-    <div>
+    <div className="page-container">
       <Helmet>
         <html lang="en" />
         <title>{title}</title>
@@ -33,23 +33,29 @@ const TemplateWrapper = ({ children }) => {
           sizes="16x16"
         />
 
+        { /*
         <link
           rel="mask-icon"
           href={`${withPrefix('/')}img/safari-pinned-tab.svg`}
           color="#ff4400"
         />
+        */ }
         <meta name="theme-color" content="#fff" />
 
-        <meta property="og:type" content="business.business" />
+        <meta property="og:type" content="website" />
         <meta property="og:title" content={title} />
         <meta property="og:url" content="/" />
+        {/*
         <meta
           property="og:image"
           content={`${withPrefix('/')}img/og-image.jpg`}
         />
+        */}
       </Helmet>
-      <Navbar />
-      <div>{children}</div>
+      <div className="content-wrap">
+        <Navbar />
+        <div>{children}</div>
+      </div>
       <Footer />
     </div>
   )
