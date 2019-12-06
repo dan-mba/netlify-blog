@@ -52,19 +52,6 @@ nav.navbar
 .content-wrap
   padding-bottom: 5.25em
 
-.full-width-image-container
-  width: 100vw
-  height: 400px
-  position: relative
-  left: 50%
-  right: 50%
-  margin: 2em -50vw
-  background-size: cover
-  background-position: bottom
-  display: flex
-  justify-content: center
-  align-items: center
-
 .full-width-image
   width: 100vw
   height: 400px
@@ -79,6 +66,7 @@ nav.navbar
     background-color: $dan-blog-color
     line-height: 1
     padding: 0.25em
+    border-radius: 5px
 
 .btn
     display: inline-block
@@ -145,18 +133,24 @@ $menu-label-color: $white-ter
 
 
 // blog roll
+.blog-list-item
+  height: 100%
 .blog-list-item.is-featured
-  background-color: #d6400033;
+  background-color: #d6400033
 .blog-list-item header
-  display: flex;
-  margin-bottom: 1em;
+  display: flex
+  margin-bottom: 1em
 .blog-list-item .featured-thumbnail
-  flex-basis: 35%;
-  margin: 0 1.5em 0 0;
+  flex-basis: 35%
+  margin: 0 1.5em 0 0
+.blog-list-item a.button
+  position: absolute
+  bottom: 20px
+.blog-list-item > p
+  padding-bottom: 35px;
 
 
 @import "~bulma"
-
 
 // responsiveness
 +tablet-only
