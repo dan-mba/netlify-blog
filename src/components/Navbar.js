@@ -47,6 +47,8 @@ const Navbar = class extends React.Component {
             <div
               className={`navbar-burger burger ${this.state.navBarActiveClass}`}
               data-target="navMenu"
+              aria-hidden="true"
+              role="presentation"
               onClick={() => this.toggleHamburger()}
             >
               <span />

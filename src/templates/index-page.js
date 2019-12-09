@@ -64,7 +64,7 @@ export const IndexPageTemplate = ({
                     <p>{description}</p>
                   </div>
                 </div>
-                <div className="column is-12">
+                <div>
                   <h3 className="has-text-weight-semibold is-size-2">
                     Latest stories
                   </h3>

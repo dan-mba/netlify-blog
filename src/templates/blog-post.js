@@ -5,6 +5,7 @@ import Helmet from 'react-helmet'
 import { graphql, Link } from 'gatsby'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
+import BlogPostImage from '../components/BlogPostImage'
 
 export const BlogPostTemplate = ({
   content,
@@ -13,11 +14,12 @@ export const BlogPostTemplate = ({
   tags,
   title,
   helmet,
+  featuredimage
 }) => {
   const PostContent = contentComponent || Content
 
   return (
-    <section className="section">
+    <section className="section blog-post">
       {helmet || ''}
       <div className="container content">
         <div className="columns">
@@ -25,18 +27,28 @@ export const BlogPostTemplate = ({
             <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
               {title}
             </h1>
-            <p>{description}</p>
+            {featuredimage ? (
+              <div className="featured-image">
+                <BlogPostImage
+                  imageInfo={{
+                    image: featuredimage,
+                    alt: `featured image for post ${title}`
+                  }}
+                />
+              </div>
+            ) : null}
+            <h3>{description}</h3>
             <PostContent content={content} />
             {tags && tags.length ? (
               <div style={{ marginTop: `4rem` }}>
                 <h4>Tags</h4>
-                <ul className="taglist">
+                <div className="tags">
                   {tags.map(tag => (
-                    <li key={tag + `tag`}>
+                    <span key={tag + `tag`} className="tag">
                       <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
-                    </li>
+                    </span>
                   ))}
-                </ul>
+                </div>
               </div>
             ) : null}
           </div>
@@ -52,6 +64,10 @@ BlogPostTemplate.propTypes = {
   description: PropTypes.string,
   title: PropTypes.string,
   helmet: PropTypes.object,
+  featuredimage: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.object
+  ])
 }
 
 const BlogPost = ({ data }) => {
@@ -74,6 +90,7 @@ const BlogPost = ({ data }) => {
         }
         tags={post.frontmatter.tags}
         title={post.frontmatter.title}
+        featuredimage={post.frontmatter.featuredimage}
       />
     </Layout>
   )
@@ -97,6 +114,15 @@ export const pageQuery = graphql`
         title
         description
         tags
+        featuredimage {
+          childImageSharp {
+            fluid(maxWidth: 1000, quality: 100) {
+              ...GatsbyImageSharpFluid
+              presentationWidth
+              presentationHeight
+            }
+          }
+        }
       }
     }
   }
