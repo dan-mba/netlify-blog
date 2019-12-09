@@ -2,11 +2,15 @@
 templateKey: index-page
 title: Dan's Software Engineering Blog
 image: /img/binary.jpg
-subtitle:  Lean new programming & web development skills with me
+subtitle: Learn new programming & web development skills with me
 mainpitch:
   title: My Software Engineering Journey
   description: >
-    Background goes here
+    In the software engineering field, if you stop learning, the field may pass
+    you by. With the explosion in programming languages & libraries recently,
+    this blog will document my attempts to keep up.
 description: >-
-  Description of blog goes here
+  The blog will primarily concentrate on programming with JavaScript and the
+  many libraries & frameworks available to use.
 ---
+
