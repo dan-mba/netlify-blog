@@ -29,6 +29,10 @@ nav.navbar
 .navbar .navbar-menu
   box-shadow:none !important
 
+.content.centerh
+  h1, h3
+    text-align: center
+
 .content .taglist
   list-style: none
   margin-bottom: 0
@@ -54,7 +58,7 @@ nav.navbar
 
 .full-width-image
   width: 100vw
-  height: 400px
+  height: 300px
   background-size: cover
   background-position: bottom
   display: flex
@@ -69,21 +73,21 @@ nav.navbar
     border-radius: 5px
 
 .btn
-    display: inline-block
-    padding: 12px 16px 10px
-    font-size: 18px
-    font-size: 1rem
-    line-height: 1.25
-    background-color: #fff
-    border-radius: .25rem
-    text-decoration: none
-    font-weight: 700
-    color: $primary
-    text-align: center
-    -webkit-box-shadow: inset 0 0 0 2px $primary
-    box-shadow: inset 0 0 0 2px $primary
-    -webkit-transition: all .15s ease
-    transition: all .15s ease
+  display: inline-block
+  padding: 12px 16px 10px
+  font-size: 18px
+  font-size: 1rem
+  line-height: 1.25
+  background-color: #fff
+  border-radius: .25rem
+  text-decoration: none
+  font-weight: 700
+  color: $primary
+  text-align: center
+  -webkit-box-shadow: inset 0 0 0 2px $primary
+  box-shadow: inset 0 0 0 2px $primary
+  -webkit-transition: all .15s ease
+  transition: all .15s ease
 
 .margin-top-0
   margin-top: 0 !important
@@ -133,6 +137,9 @@ $menu-label-color: $white-ter
 
 
 // blog roll
+div.blog-roll
+  max-width: 1000px
+  margin: 0 auto
 .blog-list-item
   height: 100%
 .blog-list-item.is-featured
@@ -141,7 +148,7 @@ $menu-label-color: $white-ter
   display: flex
   margin-bottom: 1em
 .blog-list-item .featured-thumbnail
-  flex-basis: 35%
+  flex-basis: 20%
   margin: 0 1.5em 0 0
 .blog-list-item a.button
   position: absolute
