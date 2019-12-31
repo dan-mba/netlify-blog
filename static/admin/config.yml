@@ -40,7 +40,7 @@ collections:
           - {label: Image, name: image, widget: image}
           - {label: Subtitle, name: subtitle, widget: string}
           - {label: Mainpitch, name: mainpitch, widget: object, fields: [{label: Title, name: title, widget: string}, {label: Description, name: description, widget: text}]}
-          - {label: Description, name: description, widget: string}
+          - {label: Description, name: description, widget: text}
       - file: "src/pages/about/index.md"
         label: "About"
         name: "about"
