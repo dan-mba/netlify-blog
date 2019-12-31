@@ -10,7 +10,9 @@ mainpitch:
     you by. With the explosion in programming languages & libraries recently,
     this blog will document my attempts to keep up.
 description: >-
-  The blog will primarily concentrate on programming in JavaScript and the many
-  libraries & frameworks available to use with it.
+  This blog will primarily concentrate web development, focusing on programming
+  in JavaScript and the many libraries & frameworks available to use with it. I
+  will also discuss other programming languages and development tools that I
+  have learned about.
 ---
 
