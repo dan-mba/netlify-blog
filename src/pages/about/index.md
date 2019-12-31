@@ -16,3 +16,6 @@ because it stores data in markdown files & does not require a database.
 I am primarily developing projects in JavaScript, so I will focus on that.
 That will include the frameworks & libraries I use, primarily React & Vue,
 along with my build tools.
+<br><br>
+I am also trying to learn other server side programming languages, 
+so I may ocaasionally write about them (Pyhton, Java, etc).
