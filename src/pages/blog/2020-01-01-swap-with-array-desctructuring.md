@@ -28,3 +28,7 @@ const arr = [1,2,3];
 [arr[3], arr[1]] = [arr[1], arr[3]];
 console.log(arr); // [3,2,1]
 ```
+
+For more information about array destructuring & where it is uspported, check here:
+<br>
+[MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
