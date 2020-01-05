@@ -5,11 +5,12 @@ import PreviewCompatibleImage from './PreviewCompatibleImage'
 
 class BlogRoll extends React.Component {
   render() {
-    const { data } = this.props
+    const { data, count } = this.props
     let { edges: posts } = data.allMarkdownRemark
 
-    if(data.hasOwnProperty('count') && data.count > posts.length) {
-      posts = posts.slice(0,data.count)
+    if(count && count < posts.length) {
+      console.log("in slice")
+      posts = posts.slice(0,count)
     }
 
     return (
@@ -66,9 +67,10 @@ BlogRoll.propTypes = {
       edges: PropTypes.array,
     }),
   }),
+  count: PropTypes.number,
 }
 
-export default () => (
+export default ({count}) => (
   <StaticQuery
     query={graphql`
       query BlogRollQuery {
@@ -101,6 +103,6 @@ export default () => (
         }
       }
     `}
-    render={(data, count) => <BlogRoll data={data} count={count} />}
+    render={(data) => <BlogRoll data={data} count={count} />}
   />
 )

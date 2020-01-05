@@ -66,12 +66,12 @@ export const IndexPageTemplate = ({
                 </div>
                 <div>
                   <h3 className="has-text-weight-semibold is-size-2">
-                    Latest stories
+                    Latest Blog Posts
                   </h3>
                   <BlogRoll count="4"/>
                   <div className="column is-12 has-text-centered">
                     <Link className="btn" to="/blog">
-                      Read more
+                      More Posts
                     </Link>
                   </div>
                 </div>
