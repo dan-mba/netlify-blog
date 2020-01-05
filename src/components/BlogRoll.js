@@ -9,7 +9,6 @@ class BlogRoll extends React.Component {
     let { edges: posts } = data.allMarkdownRemark
 
     if(count && count < posts.length) {
-      console.log("in slice")
       posts = posts.slice(0,count)
     }
 
