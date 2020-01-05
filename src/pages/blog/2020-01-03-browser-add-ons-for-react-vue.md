@@ -16,7 +16,7 @@ tags:
 React & Vue are two of the most popular JavaScript libraries for 
 front-end web development. They both use a virtual DOM to control 
 the content that will be displayed on a page. But this can make 
-debugging difficult as you can't easily see the data being passed to 
+debugging difficult, as you can't easily see the data being passed to 
 virtual elements. In order to make things easier for developers, the teams 
 behind both libraries have created add-ons for Firefox & Chrome to allow you 
 to see the virtual DOM element corresponding to the HTML element displayed. 
