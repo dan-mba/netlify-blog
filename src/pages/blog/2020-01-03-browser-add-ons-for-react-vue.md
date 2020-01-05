@@ -4,7 +4,7 @@ title: Browser Add-ons for React & Vue
 date: 2020-01-04T17:00:00.000Z
 description: Using browser add-ons for React & Vue makes debugging easier
 featuredpost: false
-featuredimage: /img/react-add-on.jpg
+featuredimage: /img/material-ui.jpg
 tags:
   - react
   - vue
