@@ -8,8 +8,8 @@ class BlogRoll extends React.Component {
     const { data, count } = this.props
     let { edges: posts } = data.allMarkdownRemark
 
-    if(count && count < posts.length) {
-      posts = posts.slice(0,count)
+    if(count && parseInt(count, 10) < posts.length) {
+      posts = posts.slice(0,parseInt(count,10))
     }
 
     return (
@@ -33,7 +33,7 @@ class BlogRoll extends React.Component {
                       />
                     </div>
                   ) : null}
-                  <p className="post-meta">
+                  <div className="post-meta">
                     <Link
                       className="title has-text-primary is-size-4"
                       to={post.fields.slug}
@@ -43,7 +43,7 @@ class BlogRoll extends React.Component {
                     <div className="is-size-6">
                       {post.frontmatter.date}
                     </div>
-                  </p>
+                  </div>
                 </header>
                 <p>
                   {post.excerpt}
@@ -66,7 +66,7 @@ BlogRoll.propTypes = {
       edges: PropTypes.array,
     }),
   }),
-  count: PropTypes.number,
+  count: PropTypes.string,
 }
 
 export default ({count}) => (
