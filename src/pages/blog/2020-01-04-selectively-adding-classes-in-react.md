@@ -32,5 +32,5 @@ But many times you have a base set of classes & a conditional class. This can be
 </div>
 ```
 
-For more information on ES6 template string, here is a link to a full explanation:<br>
+For more information on ES6 template strings, here is a link to a full explanation:<br>
 [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals)
