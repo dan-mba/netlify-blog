@@ -18,5 +18,5 @@ Using a collection of ready built components with a cohesive style
 can significantly speed up the development process.
 <br><br>
 For a full list of components and icons provided, along with 
-usage exmples, visit the Material-UI 
+usage examples, visit the Material-UI 
 [website](https://material-ui.com).
