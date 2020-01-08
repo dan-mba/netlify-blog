@@ -11,8 +11,7 @@ tags:
   - useState
   - state
 ---
-For reasons beyond the scope of this blog post, the React community has migrated its focus from class based components to functional components. 
-The useState hook was created to allow developers to use state variables in a functional component.
+The useState hook was created to allow developers to use state variables in a functional component. Here is a simple example on how to use it: 
 
 ```javascript
 import React, {useState} from 'react';
