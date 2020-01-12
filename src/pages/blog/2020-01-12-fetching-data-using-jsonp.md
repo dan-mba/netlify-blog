@@ -10,7 +10,7 @@ tags:
   - fetch
   - jsonp
 ---
-Recently I was converting an old project that used jQuery to React. This meant replacing all the jQuery AJAX calls. After reviewing the documentation for both axios & fetch, I found that neither supported jsonp. I searched for a compatible library and found axios-jsonp-pro. It provides all of the functionality I needed & more. Here is an example:
+Recently I was converting an old project that used jQuery to React. This meant replacing all the jQuery AJAX calls. After reviewing the documentation for both axios & fetch, I found that neither supported jsonp. I needed jsonp support because I am accessing an API on a different domain that hasn't configured CORS to allow for a normal GET request. I searched for a compatible library and found axios-jsonp-pro. It provides all of the functionality I needed & more. Here is an example:
 
 ```javascript
 import axios from 'axios-jsonp-pro';
