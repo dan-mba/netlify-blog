@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: React Lifecyce Deprecations
-date: 2020-01-14T23:11:44.971Z
+date: 2020-01-15T17:00:44.971Z
 description: React will be removing some lifecycle methods in v17
 featuredpost: false
 featuredimage: /img/react.png
