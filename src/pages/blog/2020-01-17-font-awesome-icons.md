@@ -2,7 +2,9 @@
 templateKey: blog-post
 title: Font Awesome Icons
 date: 2020-01-18T17:00:59.849Z
-description: Font Awesome provides a large library of icons you can use for your project
+description: >-
+  Font Awesome provides a large library of social media icons you can use for
+  your project
 featuredpost: false
 tags:
   - icons
