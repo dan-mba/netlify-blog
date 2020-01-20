@@ -11,7 +11,7 @@ tags:
   - windows
   - npw-windows-upgrade
 ---
-The preferred mothod of installing & updateing npm on Windows is with the Node.js installer. But there are times when you need an update before it is included with Node. On other platforms you can just do an npm update on npm, but this will not work on Windows. That is where npm-windows-upgrade comes in.<br>
+The preferred method of installing & updating npm on Windows is with the Node.js installer. But there are times when you need an update before it is included with Node. On other platforms you can just do an npm update on npm, but this will not work on Windows. That is where npm-windows-upgrade comes in.<br>
 First you need to allow scripts to run from a powershell prompt:
 ```powershell
 Set-ExecutionPolicy Unrestricted -Scope CurrentUser -Force
