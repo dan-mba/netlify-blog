@@ -14,7 +14,7 @@ tags:
 ---
 There are a couple of reasons I have found to want to set head tags from inside my React app:
 * Update the title bar
-* Set meta tags for SEO
+* Set meta tags for SEO (Search Engine Optimization)
 
 The easiest way I have found to add head tags & ensure they are correctly generated is to use Helmet. Here is an example usage:
 
