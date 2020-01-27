@@ -10,7 +10,7 @@ tags:
   - list
   - emoji
 ---
-The default circle bullet for unordered list is boring. There are several ways to change them with only CSS, but the method I have found to be the most compatible is using before pseudo-elements.
+The default circle bullet for unordered list is boring. There are several ways to change it with only CSS, but the method I have found to be the most compatible is using before pseudo-elements.
 
 ```css
 ul {
