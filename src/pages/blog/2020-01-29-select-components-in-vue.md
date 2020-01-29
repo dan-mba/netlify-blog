@@ -16,7 +16,7 @@ I will show you how I got the make select to work, as it is the same for the oth
 ```
 
 In the MakeSelect template you need to emit an event to pass the value back to the parent.
-```jsx
+```html
 <select :value=value @input="$emit('input',$event.target.value)">
   <option value="">Make:</option>
   ...
