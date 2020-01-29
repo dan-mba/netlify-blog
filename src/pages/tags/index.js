@@ -11,32 +11,42 @@ const TagsPage = ({
       siteMetadata: { title },
     },
   },
-}) => (
-  <Layout>
-    <section className="section">
-      <Helmet title={`Tags | ${title}`} />
-      <div className="container content">
-        <div className="columns">
-          <div
-            className="column is-10 is-offset-1"
-            style={{ marginBottom: '6rem' }}
-          >
-            <h1 className="title is-size-2 is-bold-light">Tags</h1>
-            <ul className="taglist">
-              {group.map(tag => (
-                <li key={tag.fieldValue}>
-                  <Link to={`/tags/${kebabCase(tag.fieldValue)}/`}>
-                    {tag.fieldValue} ({tag.totalCount})
-                  </Link>
-                </li>
-              ))}
-            </ul>
+}) => {
+  group.sort((a,b) => {
+    // Sort descending by count
+    if(b.totalCount - a.totalCount !== 0) {
+      return b.totalCount - a.totalCount;
+    }
+    //sort alphabetically
+    return a.fieldValue.toLowerCase().localeCompare(b.fieldValue.toLowerCase());
+  });
+  return (
+    <Layout>
+      <section className="section">
+        <Helmet title={`Tags | ${title}`} />
+        <div className="container content">
+          <div className="columns">
+            <div
+              className="column is-10 is-offset-1"
+              style={{ marginBottom: '6rem' }}
+            >
+              <h1 className="title is-size-2 is-bold-light">Tags</h1>
+              <ul className="taglist">
+                {group.map(tag => (
+                  <li key={tag.fieldValue}>
+                    <Link to={`/tags/${kebabCase(tag.fieldValue)}/`}>
+                      {tag.fieldValue} ({tag.totalCount})
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
-  </Layout>
-)
+      </section>
+    </Layout>
+  );
+}
 
 export default TagsPage
 
