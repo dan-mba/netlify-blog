@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: Select Components in Vue
-date: 2020-01-29T13:45:54.580Z
+date: 2020-01-29T17:00:54.580Z
 description: Creating components for select boxes in Vue requires a little more effort
 featuredpost: false
 tags:
