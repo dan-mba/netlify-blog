@@ -1,6 +1,6 @@
 ---
 templateKey: blog-post
-title: Matrerial Design Library for React
+title: Material Design Library for React
 date: 2020-01-06T17:00:00.000Z
 description: Material-UI is a library of React components implementing  Material Design
 featuredpost: false
