@@ -89,13 +89,7 @@ export default ({count}) => (
                 templateKey
                 date(formatString: "MMMM DD, YYYY")
                 featuredpost
-                featuredimage {
-                  childImageSharp {
-                    fluid(maxWidth: 460) {
-                      ...GatsbyImageSharpFluid
-                    }
-                  }
-                }
+                featuredimage
               }
             }
           }
