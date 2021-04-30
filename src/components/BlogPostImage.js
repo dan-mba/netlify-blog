@@ -21,7 +21,7 @@ const BlogPostImage = ({ imageInfo }) => {
     )
   }
 
-  if (!!childImageSharp) {
+  if (!childImageSharp) {
     imageStyle = {
       ...imageStyle,
       maxWidth: image.childImageSharp.fluid.presentationWidth,

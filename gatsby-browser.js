@@ -1,1 +1,2 @@
-require("prismjs/themes/prism-okaidia.css")
+import "./src/styles/all.sass"
+import "prismjs/themes/prism-okaidia.css"

@@ -6,7 +6,7 @@ import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 
 import logo from '../img/danlogo.png'
 
-const Footer = class extends React.Component {
+const Footer = class Footer extends React.Component {
   render() {
     return (
       <footer className="footer has-background-black has-text-white-ter">
