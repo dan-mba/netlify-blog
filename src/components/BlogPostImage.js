@@ -6,7 +6,7 @@ const BlogPostImage = ({ imageInfo }) => {
   let imageStyle = {}
   const { alt = '', childImageSharp, image } = imageInfo
 
-  if (!!image && !!image.childImageSharp) {
+  if (image && image.childImageSharp) {
     imageStyle = {
       ...imageStyle,
       maxWidth: image.childImageSharp.fluid.presentationWidth,
@@ -21,17 +21,17 @@ const BlogPostImage = ({ imageInfo }) => {
     )
   }
 
-  if (!childImageSharp) {
+  if (childImageSharp) {
     imageStyle = {
       ...imageStyle,
-      maxWidth: image.childImageSharp.fluid.presentationWidth,
-      maxHeight: image.childImageSharp.fluid.presentationHeight,
+      maxWidth: childImageSharp.fluid.presentationWidth,
+      maxHeight: childImageSharp.fluid.presentationHeight,
       margin: "0 auto"
     }
     return <Img style={imageStyle} fluid={childImageSharp.fluid} alt={alt} />
   }
 
-  if (!!image && typeof image === 'string')
+  if (image && typeof image === 'string')
     return <img style={imageStyle} src={image} alt={alt} />
 
   return null
