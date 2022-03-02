@@ -89,7 +89,16 @@ const BlogRollQuery = ({count}) => (
                 templateKey
                 date(formatString: "MMMM DD, YYYY")
                 featuredpost
-                featuredimage
+                featuredimage {
+                  childImageSharp {
+                    gatsbyImageData(
+                      width: 460,
+                      layout: CONSTRAINED,
+                      placeholder: NONE,
+                      quality: 60
+                    )
+                  }
+                }
               }
             }
           }

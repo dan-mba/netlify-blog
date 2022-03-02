@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Img from 'gatsby-image'
+import { GatsbyImage } from 'gatsby-plugin-image'
 
 const BlogPostImage = ({ imageInfo }) => {
   let imageStyle = {}
@@ -9,14 +9,12 @@ const BlogPostImage = ({ imageInfo }) => {
   if (image && image.childImageSharp) {
     imageStyle = {
       ...imageStyle,
-      maxWidth: image.childImageSharp.fluid.presentationWidth,
-      maxHeight: image.childImageSharp.fluid.presentationHeight,
       margin: "0 auto"
     }
     return (
-      <Img
+      <GatsbyImage
         style={imageStyle}
-        fluid={image.childImageSharp.fluid}
+        image={image.childImageSharp.gatsbyImageData}
         alt={alt} />
     )
   }
@@ -24,11 +22,9 @@ const BlogPostImage = ({ imageInfo }) => {
   if (childImageSharp) {
     imageStyle = {
       ...imageStyle,
-      maxWidth: childImageSharp.fluid.presentationWidth,
-      maxHeight: childImageSharp.fluid.presentationHeight,
       margin: "0 auto"
     }
-    return <Img style={imageStyle} fluid={childImageSharp.fluid} alt={alt} />
+    return <GatsbyImage style={imageStyle} image={childImageSharp.gatsbyImageData} alt={alt} />
   }
 
   if (image && typeof image === 'string')

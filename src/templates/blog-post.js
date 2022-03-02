@@ -50,7 +50,16 @@ export const pageQuery = graphql`
         title
         description
         tags
-        featuredimage
+        featuredimage {
+          childImageSharp {
+            gatsbyImageData(
+              width: 1000,
+              layout: CONSTRAINED,
+              placeholder: NONE,
+              quality: 60
+            )
+          }
+        }
       }
     }
   }
