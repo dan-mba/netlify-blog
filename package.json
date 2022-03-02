@@ -10,7 +10,6 @@
     "@fortawesome/react-fontawesome": "^0.1.17",
     "bulma": "^0.9.3",
     "gatsby": "^4.9.0",
-    "gatsby-image": "^3.11.0",
     "gatsby-plugin-image": "^2.9.0",
     "gatsby-plugin-netlify": "^4.1.0",
     "gatsby-plugin-netlify-cms": "^6.9.0",
