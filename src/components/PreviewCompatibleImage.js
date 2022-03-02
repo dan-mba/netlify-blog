@@ -8,12 +8,12 @@ const PreviewCompatibleImage = ({ imageInfo }) => {
 
   if (image && image.childImageSharp) {
     return (
-      <GatsbyImage style={imageStyle} image={image.childImageSharp.GatsbyImageData} alt={alt} />
+      <GatsbyImage style={imageStyle} image={image.childImageSharp.gatsbyImageData} alt={alt} />
     )
   }
 
   if (childImageSharp) {
-    return <GatsbyImage style={imageStyle} image={childImageSharp.GatsbyImageData} alt={alt} />
+    return <GatsbyImage style={imageStyle} image={childImageSharp.gatsbyImageData} alt={alt} />
   }
 
   if (image && typeof image === 'string')

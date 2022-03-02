@@ -30,6 +30,7 @@ export const BlogPostTemplate = ({
                 <BlogPostImage
                   imageInfo={{
                     image: featuredimage,
+                    imgStyle: {maxWidth: '1000px'},
                     alt: `featured image for post ${title}`
                   }}
                 />

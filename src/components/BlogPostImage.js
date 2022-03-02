@@ -4,7 +4,8 @@ import { GatsbyImage } from 'gatsby-plugin-image'
 
 const BlogPostImage = ({ imageInfo }) => {
   let imageStyle = {}
-  const { alt = '', childImageSharp, image } = imageInfo
+  const { alt = '', childImageSharp, image, imgStyle } = imageInfo
+  if (imgStyle) imageStyle = imgStyle
 
   if (image && image.childImageSharp) {
     imageStyle = {
@@ -38,7 +39,7 @@ BlogPostImage.propTypes = {
     alt: PropTypes.string,
     childImageSharp: PropTypes.object,
     image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]).isRequired,
-    style: PropTypes.object,
+    imgStyle: PropTypes.object,
   }).isRequired,
 }
 
