@@ -1,7 +1,7 @@
 {
   "name": "netlify-blog",
   "description": "Blog to learn Gatsby, and Netlify CMS",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "dan-mba",
   "private": true,
   "dependencies": {
