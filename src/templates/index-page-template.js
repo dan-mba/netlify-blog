@@ -14,6 +14,7 @@ export const IndexPageTemplate = ({
   <div>
     <div className="full-width-image margin-top-0">
       <GatsbyImage image={image.childImageSharp.gatsbyImageData} alt=""
+        loading="eager"
         style={{
           height: '100%',
           width: '100%',
