@@ -38,9 +38,6 @@ export const pageQuery = graphql`
         title
         image {
           childImageSharp {
-            fluid {
-              src
-            }
             gatsbyImageData(
               layout: FULL_WIDTH,
             )

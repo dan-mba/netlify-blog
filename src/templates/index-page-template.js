@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
+import { GatsbyImage } from 'gatsby-plugin-image'
 import BlogRoll from '../components/BlogRoll'
 
 export const IndexPageTemplate = ({
@@ -11,24 +12,28 @@ export const IndexPageTemplate = ({
   description,
 }) => (
   <div>
-    <div
-      className="full-width-image margin-top-0"
-      style={{
-        backgroundImage: `url(${
-          image.childImageSharp ? image.childImageSharp.fluid.src : image
-        })`,
-        backgroundPosition: `center`,
-        backgroundAttachment: `local`,
-      }}
-    >
+    <div className="full-width-image margin-top-0">
+      <GatsbyImage image={image.childImageSharp.gatsbyImageData} alt=""
+        style={{
+          height: '100%',
+          width: '100%',
+          overflow: 'hidden',
+        }}
+      />
       <div
         style={{
+          position: 'absolute',
+          top: 0,
+          left: 0,
           display: 'flex',
-          height: '150px',
+          height: '100%',
+          width: '100%',
+          gap: '1.5rem',
           lineHeight: '1',
-          justifyContent: 'space-around',
-          alignItems: 'left',
+          justifyContent: 'center',
+          alignItems: 'center',
           flexDirection: 'column',
+          zIndex: 10
         }}
       >
         <h1
