@@ -12,31 +12,12 @@ export const IndexPageTemplate = ({
   description,
 }) => (
   <div>
-    <div className="full-width-image margin-top-0">
+    <div className="hero-box margin-top-0">
       <GatsbyImage image={image.childImageSharp.gatsbyImageData} alt=""
         loading="eager"
-        style={{
-          height: '100%',
-          width: '100%',
-          overflow: 'hidden',
-        }}
+        className="hero-img-box"
       />
-      <div
-        style={{
-          position: 'absolute',
-          top: 0,
-          left: 0,
-          display: 'flex',
-          height: '100%',
-          width: '100%',
-          gap: '1.5rem',
-          lineHeight: '1',
-          justifyContent: 'center',
-          alignItems: 'center',
-          flexDirection: 'column',
-          zIndex: 10
-        }}
-      >
+      <div className="hero-text-box">
         <h1
           className="has-text-weight-bold has-text-centered is-size-3-mobile is-size-2-tablet is-size-1-widescreen"
         >

@@ -38,11 +38,7 @@ export const pageQuery = graphql`
         title
         image {
           childImageSharp {
-            gatsbyImageData(
-              layout: FULL_WIDTH,
-              placeholder: NONE,
-              quality: 30
-            )
+            gatsbyImageData(layout: FULL_WIDTH, placeholder: NONE, quality: 30)
           }
         }
         subtitle

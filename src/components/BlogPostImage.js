@@ -16,7 +16,9 @@ const BlogPostImage = ({ imageInfo }) => {
       <GatsbyImage
         style={imageStyle}
         image={image.childImageSharp.gatsbyImageData}
-        alt={alt} />
+        alt={alt}
+        loading="eager"
+      />
     )
   }
 
@@ -25,7 +27,7 @@ const BlogPostImage = ({ imageInfo }) => {
       ...imageStyle,
       margin: "0 auto"
     }
-    return <GatsbyImage style={imageStyle} image={childImageSharp.gatsbyImageData} alt={alt} />
+    return <GatsbyImage style={imageStyle} image={childImageSharp.gatsbyImageData} alt={alt} loading="eager"/>
   }
 
   if (image && typeof image === 'string')

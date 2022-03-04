@@ -56,10 +56,29 @@ nav.navbar
 .content-wrap
   padding-bottom: 7.25em
 
-.full-width-image
+.hero-box
   width: 100vw
   height: 300px
   position: relative
+
+.hero-img-box
+  height: 100%
+  width: 100%
+  overflow: hidden
+
+.hero-text-box
+  position: absolute
+  top: 0
+  left: 0
+  display: flex
+  height: 100%
+  width: 100%
+  gap: 1.5rem
+  line-height: 1
+  justify-content: center
+  align-items: center
+  flex-direction: column
+  z-index: 10
   h1, h3
     color: white
     //box-shadow: $dan-blog-color 0.5rem 0px 0px, $dan-blog-color -0.5rem 0px 0px
@@ -67,6 +86,7 @@ nav.navbar
     line-height: 1
     padding: 0.5em
     border-radius: 5px
+
 
 .btn
   display: inline-block
