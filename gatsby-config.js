@@ -1,4 +1,6 @@
 module.exports = {
+  jsxRuntime: 'automatic',
+  trailingSlash: 'always',
   siteMetadata: {
     title: 'Dan\'s Software Engineering Blog',
     description:

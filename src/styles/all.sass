@@ -44,9 +44,9 @@ nav.navbar
   justify-content: left
   align-items: center
   li
-    padding: 0 2rem 1rem 0
-    margin-bottom: 1.5rem
-    margin-top: 0
+    padding: 0 2rem 0.5rem 0
+    &:nth-of-type(even) h2
+      color: $dan-blog-color
 
 // Helper Classes
 .page-container
@@ -59,26 +59,17 @@ nav.navbar
 .hero-box
   width: 100vw
   height: 300px
-  position: relative
+  display: grid
 
 .hero-img-box
-  height: 100%
-  width: 100%
+  grid-area: 1/1
   overflow: hidden
 
 .hero-text-box
-  position: absolute
-  top: 0
-  left: 0
-  display: flex
-  height: 100%
-  width: 100%
-  gap: 1.5rem
-  line-height: 1
-  justify-content: center
-  align-items: center
-  flex-direction: column
-  z-index: 10
+  grid-area: 1/1
+  position: relative
+  place-items: center
+  display: grid
   h1, h3
     color: white
     //box-shadow: $dan-blog-color 0.5rem 0px 0px, $dan-blog-color -0.5rem 0px 0px
