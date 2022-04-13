@@ -1,81 +1,62 @@
-import React from 'react'
+import { useState, useEffect } from 'react'
 import { Link } from 'gatsby'
 import logo from '../img/danlogo.png'
 
-const Navbar = class extends React.Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      active: false,
-      navBarActiveClass: '',
-    }
-  }
+const Navbar = () => {
+  const [active, setActive] = useState(false);
+  const [navBarActiveClass, setNavBarActiveClass] = useState('');
 
-  toggleHamburger = () => {
+  const toggleHamburger = () => {
     // toggle the active boolean in the state
-    this.setState(
-      {
-        active: !this.state.active,
-      },
-      // after state has been updated,
-      () => {
-        // set the class in state for the navbar accordingly
-        this.state.active
-          ? this.setState({
-              navBarActiveClass: 'is-active',
-            })
-          : this.setState({
-              navBarActiveClass: '',
-            })
-      }
-    )
+    setActive(!active);
+    // after state has been updated,
+    useEffect(() => {
+      // set the class in state for the navbar accordingly
+      active ? setNavBarActiveClass('is-active')
+        : setNavBarActiveClass('');
+    }, [active]);
   }
 
-  render() {
-    return (
-      <nav
-        className="navbar"
-        role="navigation"
-        aria-label="main-navigation"
-      >
-        <div className="container">
-          <div className="navbar-brand">
-            <Link to="/" id="logo" className="navbar-item" title="Logo">
-              <img src={logo} alt="Dan" />
-            </Link>
-            {/* Hamburger menu */}
-            <div
-              className={`navbar-burger burger ${this.state.navBarActiveClass}`}
-              data-target="navMenu"
-              aria-hidden="true"
-              role="presentation"
-              onClick={() => this.toggleHamburger()}
-            >
-              <span />
-              <span />
-              <span />
-            </div>
-          </div>
+  return (
+    <nav
+      className="navbar"
+      role="navigation"
+      aria-label="main-navigation"
+    >
+      <div className="container">
+        <div className="navbar-brand">
+          <Link to="/" id="logo" className="navbar-item" title="Logo">
+            <img src={logo} alt="Dan" />
+          </Link>
+          {/* Hamburger menu */}
           <div
-            id="navMenu"
-            className={`navbar-menu ${this.state.navBarActiveClass}`}
+            className={`navbar-burger burger ${navBarActiveClass}`}
+            data-target="navMenu"
+            aria-hidden="true"
+            role="presentation"
+            onClick={() => toggleHamburger()}
           >
-            <div className="navbar-start has-text-centered">
-              <Link className="navbar-item" to="/about">
-                About
-              </Link>
-              <Link className="navbar-item" to="/blog">
-                Blog
-              </Link>
-              <Link className="navbar-item" to="/contact">
-                Contact
-              </Link>
-            </div>
+            <span />
+            <span />
+            <span />
           </div>
         </div>
-      </nav>
-    )
-  }
+        <div
+          id="navMenu"
+          className={`navbar-menu ${navBarActiveClass}`}
+        >
+          <div className="navbar-start has-text-centered">
+            <Link className="navbar-item" to="/about">
+              About
+            </Link>
+            <Link className="navbar-item" to="/blog">
+              Blog
+            </Link>
+          </div>
+        </div>
+      </div>
+    </nav>
+  )
 }
 
 export default Navbar

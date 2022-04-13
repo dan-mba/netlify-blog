@@ -1,4 +1,4 @@
-import React from 'react'
+import PropTypes from 'prop-types'
 import { kebabCase } from 'lodash'
 import Helmet from 'react-helmet'
 import { Link, graphql } from 'gatsby'
@@ -46,6 +46,10 @@ const TagsPage = ({
       </section>
     </Layout>
   );
+}
+
+TagsPage.propTypes = {
+  data: PropTypes.object.isRequired
 }
 
 export default TagsPage

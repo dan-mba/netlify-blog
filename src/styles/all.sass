@@ -44,9 +44,9 @@ nav.navbar
   justify-content: left
   align-items: center
   li
-    padding: 0 2rem 1rem 0
-    margin-bottom: 1.5rem
-    margin-top: 0
+    padding: 0 2rem 0.5rem 0
+    &:nth-of-type(even) h2
+      color: $dan-blog-color
 
 // Helper Classes
 .page-container
@@ -56,21 +56,28 @@ nav.navbar
 .content-wrap
   padding-bottom: 7.25em
 
-.full-width-image
+.hero-box
   width: 100vw
   height: 300px
-  background-size: cover
-  background-position: bottom
-  display: flex
-  justify-content: center
-  align-items: center
+  display: grid
+
+.hero-img-box
+  grid-area: 1/1
+  overflow: hidden
+
+.hero-text-box
+  grid-area: 1/1
+  position: relative
+  place-items: center
+  display: grid
   h1, h3
     color: white
-    box-shadow: $dan-blog-color 0.5rem 0px 0px, $dan-blog-color -0.5rem 0px 0px
+    //box-shadow: $dan-blog-color 0.5rem 0px 0px, $dan-blog-color -0.5rem 0px 0px
     background-color: $dan-blog-color
     line-height: 1
-    padding: 0.25em
+    padding: 0.5em
     border-radius: 5px
+
 
 .btn
   display: inline-block
@@ -185,6 +192,9 @@ a
   border-color: $primary
   color: $primary
 
+.section
+  padding-inline: 1.5rem
+
 // responsiveness
 +tablet-only
   .blog-list-item .featured-thumbnail
@@ -199,3 +209,6 @@ a
     margin: 0 0 1em
   .footer .column.is-one-fifth
     display: inline-block
+  .section
+    padding-inline: .5rem
+

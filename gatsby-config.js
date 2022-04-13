@@ -1,4 +1,6 @@
 module.exports = {
+  jsxRuntime: 'automatic',
+  trailingSlash: 'always',
   siteMetadata: {
     title: 'Dan\'s Software Engineering Blog',
     description:
@@ -36,6 +38,7 @@ module.exports = {
         name: 'images',
       },
     },
+    'gatsby-plugin-image',
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
     {
@@ -140,7 +143,6 @@ module.exports = {
         purgeOnly: ['/all.sass'], // applies purging only on the bulma css file
       },
     }, // must be after other CSS plugins
-    'gatsby-plugin-netlify-cache',
     'gatsby-plugin-netlify', // make sure to keep it last in the array
   ],
 }

@@ -1,37 +1,35 @@
-import React from 'react'
 import PropTypes from 'prop-types'
-import Img from 'gatsby-image'
+import { GatsbyImage } from 'gatsby-plugin-image'
 
 const BlogPostImage = ({ imageInfo }) => {
   let imageStyle = {}
-  const { alt = '', childImageSharp, image } = imageInfo
+  const { alt = '', childImageSharp, image, imgStyle } = imageInfo
+  if (imgStyle) imageStyle = imgStyle
 
-  if (!!image && !!image.childImageSharp) {
+  if (image && image.childImageSharp) {
     imageStyle = {
       ...imageStyle,
-      maxWidth: image.childImageSharp.fluid.presentationWidth,
-      maxHeight: image.childImageSharp.fluid.presentationHeight,
       margin: "0 auto"
     }
     return (
-      <Img
+      <GatsbyImage
         style={imageStyle}
-        fluid={image.childImageSharp.fluid}
-        alt={alt} />
+        image={image.childImageSharp.gatsbyImageData}
+        alt={alt}
+        loading="eager"
+      />
     )
   }
 
-  if (!!childImageSharp) {
+  if (childImageSharp) {
     imageStyle = {
       ...imageStyle,
-      maxWidth: image.childImageSharp.fluid.presentationWidth,
-      maxHeight: image.childImageSharp.fluid.presentationHeight,
       margin: "0 auto"
     }
-    return <Img style={imageStyle} fluid={childImageSharp.fluid} alt={alt} />
+    return <GatsbyImage style={imageStyle} image={childImageSharp.gatsbyImageData} alt={alt} loading="eager"/>
   }
 
-  if (!!image && typeof image === 'string')
+  if (image && typeof image === 'string')
     return <img style={imageStyle} src={image} alt={alt} />
 
   return null
@@ -42,7 +40,7 @@ BlogPostImage.propTypes = {
     alt: PropTypes.string,
     childImageSharp: PropTypes.object,
     image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]).isRequired,
-    style: PropTypes.object,
+    imgStyle: PropTypes.object,
   }).isRequired,
 }
 
