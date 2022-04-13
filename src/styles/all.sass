@@ -185,8 +185,20 @@ div.blog-roll
 
 @import "~bulma"
 
+/* Bulma Overrides */
+
 a
   color: darken($primary, 10%)
+
+
+/* purgecss ignore */
+.tag.token
+  background-color: inherit
+  display: inline
+  padding: 0
+  white-space: pre
+  font-size: inherit
+  border-radius: unset
 
 .button
   border-color: $primary

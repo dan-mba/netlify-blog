@@ -1,2 +1,2 @@
 import "./src/styles/all.sass"
-import "prismjs/themes/prism-okaidia.css"
+import "prism-themes/themes/prism-vsc-dark-plus.css"
