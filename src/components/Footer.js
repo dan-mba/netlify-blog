@@ -47,14 +47,14 @@ export default function Footer() {
             </div>
             <div className="column is-one-fifth social">
               <a title="linkedin"
-                href="https://linkedink.com"
+                href="https://www.linkedin.com/in/danburkhardt/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <FontAwesomeIcon icon={faLinkedin} />
               </a>
               <a title="github"
-                href="https://github.com"
+                href="https://github.com/dan-mba"
                 target="_blank"
                 rel="noopener noreferrer"
               >

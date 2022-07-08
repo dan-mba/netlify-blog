@@ -6,17 +6,18 @@ const Navbar = () => {
   const [active, setActive] = useState(false);
   const [navBarActiveClass, setNavBarActiveClass] = useState('');
 
+  useEffect(() => {
+    // set the class in state for the navbar accordingly
+    active ? setNavBarActiveClass('is-active')
+      : setNavBarActiveClass('');
+  }, [active]);
+
   const toggleHamburger = () => {
     // toggle the active boolean in the state
     setActive(!active);
     // after state has been updated,
-    useEffect(() => {
-      // set the class in state for the navbar accordingly
-      active ? setNavBarActiveClass('is-active')
-        : setNavBarActiveClass('');
-    }, [active]);
   }
-
+  
   return (
     <nav
       className="navbar"
