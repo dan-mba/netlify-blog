@@ -6,7 +6,6 @@ const Seo = ({children, title, description}) => {
   const { title: metaTitle, description: metaDescription } = useSiteMetadata()
   return (
     <>
-        <html lang="en" />
         <title>{title ? title : metaTitle}</title>
         <meta name="description" content={description ? description :  metaDescription} />
 
@@ -38,7 +37,7 @@ const Seo = ({children, title, description}) => {
         <meta name="theme-color" content="#fff" />
 
         <meta property="og:type" content="website" />
-        <meta property="og:title" content={title} />
+        <meta property="og:title" content={title ? title : metaTitle} />
         <meta property="og:url" content="/" />
         {/*
         <meta
