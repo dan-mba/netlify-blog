@@ -19,21 +19,21 @@ export default function Footer() {
           <div className="columns">
             <div className="column is-one-quarter">
               <section className="menu menu-list">
-                <Link to="/" className="navbar-item">
+                <Link className="navbar-item has-text-centered" to="/">
                   Home
                 </Link>
               </section>
             </div>
             <div className="column is-one-quarter">
               <section className="menu menu-list">
-                <Link className="navbar-item" to="/about">
+                <Link className="navbar-item has-text-centered" to="/about">
                   About
                 </Link>
               </section>
             </div>
             <div className="column is-one-quarter">
               <section className="menu menu-list">
-                <Link className="navbar-item" to="/blog">
+                <Link className="navbar-item has-text-centered" to="/blog">
                   Latest Stories
                 </Link>
               </section>
