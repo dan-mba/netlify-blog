@@ -1,15 +1,12 @@
 import PropTypes from 'prop-types'
-import { kebabCase } from 'lodash'
-import Helmet from 'react-helmet'
-import { Link, graphql } from 'gatsby'
+import {kebabCase} from 'lodash'
+import {Link, graphql} from 'gatsby'
 import Layout from '../../components/Layout'
+import Seo from '../../components/Seo'
 
 const TagsPage = ({
   data: {
     allMarkdownRemark: { group },
-    site: {
-      siteMetadata: { title },
-    },
   },
 }) => {
   group.sort((a,b) => {
@@ -23,7 +20,6 @@ const TagsPage = ({
   return (
     <Layout>
       <section className="section">
-        <Helmet title={`Tags | ${title}`} />
         <div className="container content">
           <div className="columns">
             <div
@@ -53,6 +49,22 @@ TagsPage.propTypes = {
 }
 
 export default TagsPage
+
+export const Head = ({
+  data: {
+    site: {
+      siteMetadata: { title },
+    },
+  },
+}) => {
+  return (
+    <Seo title={`Tags | ${title}`}/>
+  )
+}
+
+Head.propTypes = {
+  data: PropTypes.object.isRequired
+}
 
 export const tagPageQuery = graphql`
   query TagsQuery {

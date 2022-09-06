@@ -46,7 +46,7 @@ const Seo = ({children, title, description}) => {
           content={`${withPrefix('/')}img/og-image.jpg`}
         />
         */}
-        {children}
+        {children ? children : null}
       </>
   );
 }

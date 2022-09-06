@@ -7,7 +7,6 @@ module.exports = {
       'A blog about software engineering & learning new skills',
   },
   plugins: [
-    'gatsby-plugin-react-helmet',
     {
       resolve: 'gatsby-plugin-sass',
       options: {

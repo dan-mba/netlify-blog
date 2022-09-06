@@ -18,4 +18,4 @@ That will include the frameworks & libraries I use, primarily React & Vue,
 along with my build tools.
 <br><br>
 I am also trying to learn other server side programming languages, 
-so I may ocaasionally write about them (Pyhton, Java, etc).
+so I may occasionally write about them (Python, Java, etc).

@@ -14,7 +14,6 @@
     "gatsby-plugin-netlify": "^5.0.1",
     "gatsby-plugin-netlify-cms": "^6.22.0",
     "gatsby-plugin-purgecss": "^6.1.2",
-    "gatsby-plugin-react-helmet": "^5.22.0",
     "gatsby-plugin-sass": "^5.22.0",
     "gatsby-plugin-sharp": "^4.22.0",
     "gatsby-remark-copy-linked-files": "^5.22.0",
@@ -32,7 +31,6 @@
     "prop-types": "^15.8.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-helmet": "^6.1.0",
     "sass": "^1.54.8"
   },
   "keywords": [
@@ -52,7 +50,7 @@
   },
   "devDependencies": {
     "eslint": "^8.23.0",
-    "eslint-plugin-react": "^7.31.1",
+    "eslint-plugin-react": "^7.31.7",
     "prettier": "^2.7.1"
   }
 }

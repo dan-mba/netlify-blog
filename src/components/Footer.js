@@ -38,13 +38,6 @@ export default function Footer() {
                 </Link>
               </section>
             </div>
-            <div className="column is-one-fifth">
-              <section className="menu menu-list">
-                <Link className="navbar-item" to="/contact">
-                  Contact
-                </Link>
-              </section>
-            </div>
             <div className="column is-one-fifth social">
               <a title="linkedin"
                 href="https://www.linkedin.com/in/danburkhardt/"

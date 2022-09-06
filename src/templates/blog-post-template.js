@@ -10,14 +10,12 @@ export const BlogPostTemplate = ({
   description,
   tags,
   title,
-  helmet,
   featuredimage
 }) => {
   const PostContent = contentComponent || Content
 
   return (
     <section className="section blog-post">
-      {helmet || ''}
       <div className="container content">
         <div className="columns">
           <div className="column is-10 is-offset-1">
@@ -62,7 +60,6 @@ BlogPostTemplate.propTypes = {
   description: PropTypes.string,
   tags: PropTypes.array,
   title: PropTypes.string,
-  helmet: PropTypes.object,
   featuredimage: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.object

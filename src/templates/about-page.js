@@ -1,8 +1,9 @@
 import PropTypes from 'prop-types'
-import { graphql } from 'gatsby'
+import {graphql} from 'gatsby'
 import Layout from '../components/Layout'
-import { HTMLContent } from '../components/Content'
-import { AboutPageTemplate } from "./about-page-template"
+import {HTMLContent} from '../components/Content'
+import Seo from '../components/Seo'
+import {AboutPageTemplate} from "./about-page-template"
 
 const AboutPage = ({ data }) => {
   const { markdownRemark: post } = data
@@ -23,6 +24,12 @@ AboutPage.propTypes = {
 }
 
 export default AboutPage
+
+export const Head = () => {
+  return (
+    <Seo />
+  )
+}
 
 export const aboutPageQuery = graphql`
   query AboutPage($id: String!) {
