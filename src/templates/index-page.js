@@ -1,7 +1,8 @@
 import PropTypes from 'prop-types'
-import { graphql } from 'gatsby'
+import {graphql} from 'gatsby'
 import Layout from '../components/Layout'
-import { IndexPageTemplate } from './index-page-template'
+import Seo from '../components/Seo'
+import {IndexPageTemplate} from './index-page-template'
 
 
 const IndexPage = ({ data }) => {
@@ -29,6 +30,12 @@ IndexPage.propTypes = {
 }
 
 export default IndexPage
+
+export const Head = () => {
+  return (
+    <Seo />
+  )
+}
 
 export const pageQuery = graphql`
   query IndexPageTemplate {

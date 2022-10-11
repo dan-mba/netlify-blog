@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types'
-import Helmet from 'react-helmet'
-import { graphql } from 'gatsby'
+import {graphql} from 'gatsby'
 import Layout from '../components/Layout'
-import { HTMLContent } from '../components/Content'
-import { BlogPostTemplate } from './blog-post-template'
+import {HTMLContent} from '../components/Content'
+import Seo from '../components/Seo'
+import {BlogPostTemplate} from './blog-post-template'
 
 const BlogPost = ({ data }) => {
   const { markdownRemark: post } = data
@@ -14,15 +14,6 @@ const BlogPost = ({ data }) => {
         content={post.html}
         contentComponent={HTMLContent}
         description={post.frontmatter.description}
-        helmet={
-          <Helmet titleTemplate="%s | Blog">
-            <title>{`${post.frontmatter.title}`}</title>
-            <meta
-              name="description"
-              content={`${post.frontmatter.description}`}
-            />
-          </Helmet>
-        }
         tags={post.frontmatter.tags}
         title={post.frontmatter.title}
         featuredimage={post.frontmatter.featuredimage}
@@ -38,6 +29,18 @@ BlogPost.propTypes = {
 }
 
 export default BlogPost
+
+export const Head = ({data: { markdownRemark: post }}) => {
+  return (
+    <Seo title={`${post.frontmatter.title} | Blog`} description={post.frontmatter.description} />
+  )
+}
+
+Head.propTypes = {
+  data: PropTypes.shape({
+    markdownRemark: PropTypes.object,
+  }),
+}
 
 export const pageQuery = graphql`
   query BlogPostByID($id: String!) {

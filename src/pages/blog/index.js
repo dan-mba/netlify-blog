@@ -1,7 +1,7 @@
-import { StaticImage } from 'gatsby-plugin-image'
-
+import {StaticImage} from 'gatsby-plugin-image'
 import Layout from '../../components/Layout'
 import BlogRoll from '../../components/BlogRoll'
+import Seo from '../../components/Seo'
 
 export default function BlogIndexPage() {
   return (
@@ -28,5 +28,11 @@ export default function BlogIndexPage() {
         </div>
       </section>
     </Layout>
+  )
+}
+
+export const Head = () => {
+  return (
+    <Seo />
   )
 }

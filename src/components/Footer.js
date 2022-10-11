@@ -17,35 +17,28 @@ export default function Footer() {
       <div className="content has-text-centered has-background-black has-text-white-ter">
         <div className="container has-background-black has-text-white-ter">
           <div className="columns">
-            <div className="column is-one-fifth">
+            <div className="column is-one-quarter">
               <section className="menu menu-list">
-                <Link to="/" className="navbar-item">
+                <Link className="navbar-item has-text-centered" to="/">
                   Home
                 </Link>
               </section>
             </div>
-            <div className="column is-one-fifth">
+            <div className="column is-one-quarter">
               <section className="menu menu-list">
-                <Link className="navbar-item" to="/about">
+                <Link className="navbar-item has-text-centered" to="/about">
                   About
                 </Link>
               </section>
             </div>
-            <div className="column is-one-fifth">
+            <div className="column is-one-quarter">
               <section className="menu menu-list">
-                <Link className="navbar-item" to="/blog">
+                <Link className="navbar-item has-text-centered" to="/blog">
                   Latest Stories
                 </Link>
               </section>
             </div>
-            <div className="column is-one-fifth">
-              <section className="menu menu-list">
-                <Link className="navbar-item" to="/contact">
-                  Contact
-                </Link>
-              </section>
-            </div>
-            <div className="column is-one-fifth social">
+            <div className="column is-one-quarter social">
               <a title="linkedin"
                 href="https://www.linkedin.com/in/danburkhardt/"
                 target="_blank"

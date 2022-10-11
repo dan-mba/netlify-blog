@@ -1,7 +1,7 @@
-import Helmet from 'react-helmet'
 import PropTypes from 'prop-types'
-import { Link, graphql } from 'gatsby'
+import {Link, graphql} from 'gatsby'
 import Layout from '../components/Layout'
+import Seo from '../components/Seo'
 
 export default function TagRoute({data, pageContext}) {
   const posts = data.allMarkdownRemark.edges
@@ -13,7 +13,6 @@ export default function TagRoute({data, pageContext}) {
     </li>
   ))
   const tag = pageContext.tag
-  const title = data.site.siteMetadata.title
   const totalCount = data.allMarkdownRemark.totalCount
   const tagHeader = `${totalCount} post${
     totalCount === 1 ? '' : 's'
@@ -21,7 +20,6 @@ export default function TagRoute({data, pageContext}) {
   return (
     <Layout>
       <section className="section">
-        <Helmet title={`${tag} | ${title}`} />
         <div className="container content">
           <div className="columns">
             <div
@@ -42,6 +40,20 @@ export default function TagRoute({data, pageContext}) {
 }
 
 TagRoute.propTypes = {
+  data: PropTypes.object.isRequired,
+  pageContext: PropTypes.object.isRequired,
+}
+
+export const Head = ({data, pageContext}) => {
+  const tag = pageContext.tag
+  const title = data.site.siteMetadata.title
+
+  return (
+    <Seo title={`${tag} | ${title}`}/>
+  )
+}
+
+Head.propTypes = {
   data: PropTypes.object.isRequired,
   pageContext: PropTypes.object.isRequired,
 }
